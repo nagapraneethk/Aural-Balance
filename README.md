@@ -43,7 +43,12 @@ cd speech-emotion-recognition
 pip install -r requirements.txt
 ```
 
-### 3. Run the Notebook
+### 3. Navigate to Notebooks Directory
+```bash
+cd notebooks
+```
+
+### 4. Run the Notebook
 Open the notebook with VS Code or Jupyter:
 ```bash
 jupyter notebook Speech_emotion_recognition.ipynb
@@ -53,6 +58,24 @@ jupyter notebook Speech_emotion_recognition.ipynb
 - **Algorithm**: Random Forest
 - **Evaluation Metrics**: Accuracy, Confusion Matrix, Classification Report
 - **Tuning**: GridSearchCV for optimal hyperparameters
+- **Model Storage**: Trained models are saved in the `models/` directory
+
+## 📁 Project Structure
+```
+AuralBalance/
+├── notebooks/
+│   ├── Speech_emotion_recognition.ipynb    # Main training notebook
+│   ├── data_exploration_notebook.ipynb     # Data analysis and visualization
+│   └── training_model_notebook.ipynb       # Alternative training approach
+├── models/
+│   ├── best_rf_model.joblib                # Best performing Random Forest model
+│   ├── emotion_recognition_model.pkl       # Alternative trained model
+│   ├── label_encoder.pkl                   # Label encoder for emotion mapping
+│   └── svm_emotion_model.pkl               # SVM-based emotion model
+├── emotion_predictor.py                    # Production inference script
+├── requirements.txt                        # Project dependencies
+└── README.md                               # Project documentation
+```
 
 ## 📊 Results
 - Confusion matrix displayed for multi-class emotion classification
@@ -73,6 +96,18 @@ jupyter notebook Speech_emotion_recognition.ipynb
 - The model is trained on RAVDESS but can be adapted for other datasets
 - Different datasets may require adjustment of emotion labels and feature extraction parameters
 - For optimal performance, ensure audio files are preprocessed consistently across datasets
+- **Notebooks**: All Jupyter notebooks are located in the `notebooks/` directory
+- **Models**: Trained models and encoders are stored in the `models/` directory
+- **Inference**: Use `emotion_predictor.py` for real-time emotion prediction
+
+## 🚀 Quick Start for Inference
+```python
+from emotion_predictor import predict_emotion
+
+# Predict emotion from an audio file
+emotion = predict_emotion('path/to/your/audio.wav')
+print(f"Predicted emotion: {emotion}")
+```
 
 ## 📝 License
 This project is licensed under the MIT License.
