@@ -1,5 +1,5 @@
 
-# Speech Emotion Recognition 🎙️
+# Aural Balance 🎙️
 
 This project focuses on recognizing human emotions from speech audio using machine learning techniques. It involves preprocessing, feature extraction, model training, and evaluation.
 
@@ -10,8 +10,25 @@ This project focuses on recognizing human emotions from speech audio using machi
 - Hyperparameter tuning using `GridSearchCV`
 - Model evaluation with accuracy and confusion matrix
 
-## 🗂️ Dataset
-The dataset used is the **RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)** dataset, containing labeled audio samples representing different emotional states.
+## 🗂️ Datasets
+
+This project primarily uses the **RAVDESS** dataset, but is compatible with other speech emotion recognition datasets:
+
+### Primary Dataset
+- **RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)**
+  - Contains 7,356 files with 24 professional actors
+  - 8 emotions: calm, happy, sad, angry, fearful, surprise, disgust, neutral
+  - Links: 
+    - [RAVDESS Original](https://zenodo.org/record/1188976)
+    - [RAVDESS on Kaggle](https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio)
+
+### Alternative Compatible Datasets
+- **CREMA-D (Crowd-sourced Emotional Multimodal Actors Dataset)**
+  - 7,442 clips from 91 actors
+  - 6 emotions: anger, disgust, fear, happy, neutral, sad
+  - Links:
+    - [CREMA-D Original](https://github.com/CheyneyComputerScience/CREMA-D)
+    - [CREMA-D on Kaggle](https://www.kaggle.com/datasets/ejlok1/cremad)
 
 ## 🚀 Getting Started
 
@@ -49,6 +66,13 @@ jupyter notebook Speech_emotion_recognition.ipynb
 - matplotlib
 - seaborn
 - joblib
+- sounddevice (for real-time audio recording)
+- scipy (for audio I/O operations)
+
+## 🎯 Usage Notes
+- The model is trained on RAVDESS but can be adapted for other datasets
+- Different datasets may require adjustment of emotion labels and feature extraction parameters
+- For optimal performance, ensure audio files are preprocessed consistently across datasets
 
 ## 📝 License
 This project is licensed under the MIT License.
