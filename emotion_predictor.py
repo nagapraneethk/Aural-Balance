@@ -66,8 +66,8 @@ def extract_features(file_path, max_pad_len=174):
         return None
 
 def predict_emotion(file_path, 
-                   model_path='../notebooks/emotion_recognition_model.pkl', 
-                   encoder_path='../notebooks/label_encoder.pkl'):
+                   model_path='models/best_rf_model.joblib', 
+                   encoder_path='models/label_encoder.pkl'):
     """Predict emotion for a given audio file."""
     try:
         # Load the saved model and label encoder
