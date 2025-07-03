@@ -4,10 +4,6 @@ import joblib
 import os
 
 def extract_features(file_path, max_pad_len=174):
-    """
-    Enhanced feature extraction with more robust feature generation
-    and padding/truncation
-    """
     try:
         # Load audio file
         y, sr = librosa.load(file_path, duration=3, offset=0.5)
