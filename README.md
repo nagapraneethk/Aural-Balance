@@ -101,12 +101,38 @@ AuralBalance/
 - **Inference**: Use `emotion_predictor.py` for real-time emotion prediction
 
 ## 🚀 Quick Start for Inference
-```python
-from emotion_predictor import predict_emotion
 
-# Predict emotion from an audio file
+### Method 1: Using the Emotion Predictor Script
+```bash
+# For single file prediction
+python emotion_predictor.py
+```
+
+### Method 2: Import in Your Code
+```python
+from emotion_predictor import predict_emotion, batch_predict
+
+# Predict emotion from a single audio file
 emotion = predict_emotion('path/to/your/audio.wav')
 print(f"Predicted emotion: {emotion}")
+
+# Predict emotions for multiple files in a directory
+results = batch_predict('path/to/audio/directory')
+print(results)
+```
+
+### Method 3: Customize the Main Function
+Edit the `main()` function in `emotion_predictor.py` to test with your own audio files:
+```python
+def main():
+    # Single file prediction
+    test_audio_path = 'your/audio/file.wav'
+    predicted_emotion = predict_emotion(test_audio_path)
+    print(f"Predicted Emotion: {predicted_emotion}")
+    
+    # Batch prediction (uncomment to use)
+    # test_directory = 'your/audio/directory'
+    # batch_results = batch_predict(test_directory)
 ```
 
 ## 📝 License
