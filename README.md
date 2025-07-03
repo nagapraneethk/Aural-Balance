@@ -34,8 +34,8 @@ This project primarily uses the **RAVDESS** dataset, but is compatible with othe
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/nagapraneethk/speech-emotion-recognition.git
-cd speech-emotion-recognition
+git clone https://github.com/nagapraneethk/AuralBalance.git
+cd AuralBalance
 ```
 
 ### 2. Install Requirements
