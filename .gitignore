@@ -1,0 +1,11 @@
+AuralBalance/__pycache__/
+AuralBalance/*.py[cod]
+AuralBalance/*$py.class
+AuralBalance/*.so
+AuralBalance/.Python
+
+
+.ipynb_checkpoints/
+
+
+.DS_Store
